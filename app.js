@@ -13,8 +13,10 @@ function dadosTela(dados){
 
 // async é quando tem servidor
 async function searchCity(city){
-    const dados = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&lang=pt_br&units=metric`).then( Response => Response.json())
+    const dados = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},BR&appid=${key}&lang=pt_br&units=metric`).then( Response => Response.json());
+
     dadosTela(dados)
+
 }
 
 function ButtonClick(){
